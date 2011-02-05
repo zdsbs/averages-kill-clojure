@@ -1,0 +1,8 @@
+{:server-socket #<ServerSocket ServerSocket[addr=localhost/127.0.0.1,port=0,localport=63813]>, :connections #<Ref@2b2cf8: #{}>}
+[INFO] snapshot org.clojure.contrib:core:1.3.0-SNAPSHOT: checking for updates from maven
+[INFO] snapshot org.clojure.contrib:parent:1.3.0-SNAPSHOT: checking for updates from maven
+[INFO] snapshot org.clojure.contrib:def:1.3.0-SNAPSHOT: checking for updates from maven
+
+FAIL at (sim.clj:8)
+    Expected: 22
+      Actual: 2
