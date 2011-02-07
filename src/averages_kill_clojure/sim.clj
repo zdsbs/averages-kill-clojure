@@ -1,19 +1,16 @@
 (ns averages-kill-clojure.sim)
 
-(defn worker [])
+(def worker 
+  :worker)
 
 (defn work-order [size]
   size)
 
-
-
 (defn expected-number-of-work-orders [first-tier]
   (count (:work first-tier)))
 
-
 (defn sim-finished? [last-tier expected-completed]
   (= (count (:completed-work last-tier)) expected-completed))
-
 
 (defn free-workers? [tier]
   (not (empty? (:free-workers tier))))
@@ -81,7 +78,9 @@
     [update]))
 
 (defn run-sim [orig-tiers]
+  (println "Starting sim\n" orig-tiers)
   (loop [tiers orig-tiers cur-time 0]
+    (println cur-time)
     (if (or
           (= 100 cur-time)
           (sim-finished? (last tiers) (expected-number-of-work-orders (first orig-tiers))))

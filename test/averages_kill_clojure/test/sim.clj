@@ -70,6 +70,5 @@
                 ]) => 0)
 
 
-(fact "big" (run-sim [tier-with-work-order]) => 3)
 
 
