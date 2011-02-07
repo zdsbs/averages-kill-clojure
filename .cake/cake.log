@@ -1267,3 +1267,873 @@ FAIL at (sim.clj:106)
 FAIL at (sim.clj:148)
     Expected: 3
       Actual: 0
+
+FAIL at (sim.clj:57)
+    Expected: {:new-work [], :new-free-workers [], :new-working [[0 nil] [0 nil]]}
+      Actual: {:new-work (nil), :new-free-workers (#<sim$worker averages_kill_clojure.test.sim$worker@2839bd>), :new-working [[0 nil]]}
+
+FAIL at (sim.clj:91)
+    Expected: {:work [], :free-workers [], :working [[0 nil]], :completed-work []}
+      Actual: {:working [], :new-work (), :new-free-workers (), :new-working [[0 nil]]}
+
+FAIL at (sim.clj:96)
+    Expected: {:work [], :free-workers [], :working [1 nil], :completed-work []}
+      Actual: {:working [], :new-work (), :new-free-workers (), :new-working [[0 nil]]}
+
+FAIL at (sim.clj:138)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:91)
+    Expected: {:work [], :free-workers [], :working [[0 nil]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 nil]]}
+
+FAIL at (sim.clj:96)
+    Expected: {:work [], :free-workers [], :working [1 nil], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 nil] [1 nil]]}
+
+FAIL at (sim.clj:138)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:64)
+    Expected: {:work [], :free-workers [#<sim$worker averages_kill_clojure.test.sim$worker@1770114>], :working [0 nil]}
+      Actual: {:work (), :free-workers (), :working [0 nil [0 nil]]}
+
+FAIL at (sim.clj:98)
+    Expected: {:work [], :free-workers [], :working [[0 nil]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 nil]]}
+
+FAIL at (sim.clj:103)
+    Expected: {:work [], :free-workers [], :working [1 nil], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 nil] [1 nil]]}
+
+FAIL at (sim.clj:145)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:64)
+    Expected: {:work [], :free-workers [], :working [0 nil]}
+      Actual: {:work (), :free-workers (), :working [0 nil [0 nil]]}
+
+FAIL at (sim.clj:98)
+    Expected: {:work [], :free-workers [], :working [[0 nil]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 nil]]}
+
+FAIL at (sim.clj:103)
+    Expected: {:work [], :free-workers [], :working [1 nil], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 nil] [1 nil]]}
+
+FAIL at (sim.clj:145)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:64)
+    Expected: {:work [], :free-workers [], :working [0 nil], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [0 nil [0 nil]]}
+
+FAIL at (sim.clj:99)
+    Expected: {:work [], :free-workers [], :working [[0 nil]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 nil]]}
+
+FAIL at (sim.clj:104)
+    Expected: {:work [], :free-workers [], :working [1 nil], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 nil] [1 nil]]}
+
+FAIL at (sim.clj:146)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:64)
+    Expected: {:work [], :free-workers [], :working [0 nil]}
+      Actual: {:work (), :free-workers (), :working [[0 nil]]}
+
+FAIL at (sim.clj:98)
+    Expected: {:work [], :free-workers [], :working [[0 nil]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 nil]]}
+
+FAIL at (sim.clj:103)
+    Expected: {:work [], :free-workers [], :working [1 nil], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[1 nil]]}
+
+FAIL at (sim.clj:145)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:98)
+    Expected: {:work [], :free-workers [], :working [[0 nil]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 nil]]}
+
+FAIL at (sim.clj:103)
+    Expected: {:work [], :free-workers [], :working [1 nil], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[1 nil]]}
+
+FAIL at (sim.clj:145)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:105)
+    Expected: {:work [], :free-workers [], :working [1 nil], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[1 nil]], :completed-work []}
+
+FAIL at (sim.clj:147)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:147)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:110)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[nil]]}
+      Actual: {:work (), :free-workers (), :working [[2 nil]], :completed-work []}
+
+FAIL at (sim.clj:147)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:107)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[nil]]}
+      Actual: {:work (), :free-workers (), :working [[2 nil]], :completed-work []}
+
+FAIL at (sim.clj:144)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:98)
+    Expected: {:work [], :free-workers [], :working [[0 nil]], :completed-work []}
+      Actual: {:complete-work [], :work (), :free-workers (), :working [[0 nil]], :completed-work []}
+
+FAIL at (sim.clj:103)
+    Expected: {:work [], :free-workers [], :working [[1 nil]], :completed-work []}
+      Actual: {:complete-work [], :work (), :free-workers (), :working [[1 nil]], :completed-work []}
+
+FAIL at (sim.clj:108)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[nil]]}
+      Actual: {:complete-work [], :work (), :free-workers (), :working [[2 nil]], :completed-work []}
+
+FAIL at (sim.clj:145)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:98)
+    Expected: {:work [], :free-workers [], :working [[0 nil]], :completed-work []}
+      Actual: {:complete-work [], :work (), :free-workers (), :working [[0 nil]], :completed-work []}
+
+FAIL at (sim.clj:103)
+    Expected: {:work [], :free-workers [], :working [[1 nil]], :completed-work []}
+      Actual: {:complete-work [], :work (), :free-workers (), :working [[1 nil]], :completed-work []}
+
+FAIL at (sim.clj:108)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[nil]]}
+      Actual: {:complete-work [], :work (), :free-workers (), :working [[2 nil]], :completed-work []}
+
+FAIL at (sim.clj:145)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:108)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[nil]]}
+      Actual: {:work (), :free-workers (), :working [[2 nil]], :completed-work []}
+
+FAIL at (sim.clj:145)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:82)
+    Expected: {:working [[1 nil] [2 nil]]}
+      Actual: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.IllegalArgumentException: Wrong number of args (1) passed to: sim$finished-QMARK-
+              averages_kill_clojure.test.sim$eval23417.invoke(sim.clj:82)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:83)
+    Expected: {:working [[1 nil]]}
+      Actual: {:working [[0 nil] [2 nil]]}
+
+FAIL at (sim.clj:88)
+    Expected: {:working [[1 1] [2 2]]}
+      Actual: {:working ()}
+
+FAIL at (sim.clj:89)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:88)
+    Expected: {:working [[1 1] [2 2]]}
+      Actual: {:working [[0 1] [1 2]]}
+
+FAIL at (sim.clj:89)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:111)
+    Expected: {:work [], :free-workers [], :working [[1 1]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:116)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:153)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:88)
+    Expected: {:working [[1 1] [2 2]]}
+      Actual: {:working ()}
+
+FAIL at (sim.clj:89)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:86)
+    Expected: []
+      Actual: [[1 1]]
+
+FAIL at (sim.clj:91)
+    Expected: {:working [[1 1] [2 2]]}
+      Actual: {:working [[0 1] [1 2]]}
+
+FAIL at (sim.clj:92)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:114)
+    Expected: {:work [], :free-workers [], :working [[1 1]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:119)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:156)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:86)
+    Expected: []
+      Actual: [[1 1]]
+
+FAIL at (sim.clj:91)
+    Expected: {:working [[1 1] [2 2]]}
+      Actual: {:working [[0 1] [1 2]]}
+
+FAIL at (sim.clj:92)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:114)
+    Expected: {:work [], :free-workers [], :working [[1 1]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:119)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:156)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:86)
+    Expected: []
+      Actual: [[1 1]]
+
+FAIL at (sim.clj:93)
+    Expected: {:working [[1 1] [2 2]]}
+      Actual: {:working [[0 1] [1 2]]}
+
+FAIL at (sim.clj:94)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:116)
+    Expected: {:work [], :free-workers [], :working [[1 1]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:121)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:158)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:93)
+    Expected: {:working [[1 1] [2 2]]}
+      Actual: {:working [[0 1] [1 2]]}
+
+FAIL at (sim.clj:94)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:116)
+    Expected: {:work [], :free-workers [], :working [[1 1]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:121)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:158)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:86)
+    Expected: []
+      Actual: [[1 1]]
+
+FAIL at (sim.clj:93)
+    Expected: {:working [[1 1] [2 2]]}
+      Actual: {:working [[0 1] [1 2]]}
+
+FAIL at (sim.clj:94)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:116)
+    Expected: {:work [], :free-workers [], :working [[1 1]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:121)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:158)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:86)
+    Expected: []
+      Actual: [[1 1]]
+
+FAIL at (sim.clj:93)
+    Expected: {:working [[1 1] [2 2]]}
+      Actual: {:working [[0 1] [1 2]]}
+
+FAIL at (sim.clj:94)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:116)
+    Expected: {:work [], :free-workers [], :working [[1 1]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:121)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:158)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:86)
+    Expected: []
+      Actual: [[0 1]]
+
+FAIL at (sim.clj:93)
+    Expected: {:working [[1 1] [2 2]]}
+      Actual: {:working [[0 1] [1 2]]}
+
+FAIL at (sim.clj:94)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:116)
+    Expected: {:work [], :free-workers [], :working [[1 1]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:121)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:158)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:93)
+    Expected: {:working [[1 1] [2 2]]}
+      Actual: {:working [[0 1] [1 2]]}
+
+FAIL at (sim.clj:94)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:116)
+    Expected: {:work [], :free-workers [], :working [[1 1]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:121)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:158)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:91)
+    Expected: {:working [[1 1] [2 2]]}
+      Actual: {:working ()}
+
+FAIL at (sim.clj:92)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:91)
+    Expected: {:working [[1 1] [2 2]]}
+      Actual: {:working [[0 1] [1 2]]}
+
+FAIL at (sim.clj:92)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:114)
+    Expected: {:work [], :free-workers [], :working [[1 1]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:119)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:156)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:96)
+    Expected: {:working [[1 1] [2 2]]}
+      Actual: {:working ()}
+
+FAIL at (sim.clj:97)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:90)
+    Expected: [[0 1] [1 2]]
+      Actual: ()
+
+FAIL at (sim.clj:98)
+    Expected: {:working [[1 1] [2 2]]}
+      Actual: {:working [[0 1] [1 2]]}
+
+FAIL at (sim.clj:99)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:121)
+    Expected: {:work [], :free-workers [], :working [[1 1]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:126)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:163)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:84)
+    Expected: true
+      Actual: false
+
+FAIL at (sim.clj:91)
+    Expected: [[0 1] [1 2]]
+      Actual: ()
+
+FAIL at (sim.clj:99)
+    Expected: {:working [[1 1] [2 2]]}
+      Actual: {:working [[0 1] [1 2]]}
+
+FAIL at (sim.clj:100)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:122)
+    Expected: {:work [], :free-workers [], :working [[1 1]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:127)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:164)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:99)
+    Expected: {:working [[1 1] [2 2]]}
+      Actual: {:working [[0 1] [1 2]]}
+
+FAIL at (sim.clj:100)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:122)
+    Expected: {:work [], :free-workers [], :working [[1 1]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:127)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:164)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:99)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:92)
+    Expected: [[0 1] [1 2]]
+      Actual: {:working [[0 1] [1 2]]}
+
+FAIL at (sim.clj:102)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:92)
+    Expected: [[0 1] [1 2]]
+      Actual: {:working [[0 1] [1 2]]}
+
+FAIL at (sim.clj:101)
+    Expected: {:working [[1 1] [2 2]]}
+      Actual: {:working [[0 1] [1 2]]}
+
+FAIL at (sim.clj:102)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:124)
+    Expected: {:work [], :free-workers [], :working [[1 1]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:129)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:166)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:101)
+    Expected: {:working [[1 1] [2 2]]}
+      Actual: {:working [[0 1] [1 2]]}
+
+FAIL at (sim.clj:102)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:124)
+    Expected: {:work [], :free-workers [], :working [[1 1]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:129)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:166)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:92)
+    Expected: [[0 1] [1 2]]
+      Actual: ([1 1] [2 2])
+
+FAIL at (sim.clj:101)
+    Expected: {:working [[1 1] [2 2]]}
+      Actual: {:working [[0 1] [1 2]]}
+
+FAIL at (sim.clj:102)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:124)
+    Expected: {:work [], :free-workers [], :working [[1 1]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:129)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:166)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:92)
+    Expected: [[0 1] [1 2]]
+      Actual: {:working ([1 1] [2 2])}
+
+FAIL at (sim.clj:101)
+    Expected: {:working [[1 1] [2 2]]}
+      Actual: {:working [[0 1] [1 2]]}
+
+FAIL at (sim.clj:102)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:124)
+    Expected: {:work [], :free-workers [], :working [[1 1]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:129)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: {:work (), :free-workers (), :working [[0 1]], :completed-work []}
+
+FAIL at (sim.clj:166)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:92)
+    Expected: [[0 1] [1 2]]
+      Actual: {:working ([1 1] [2 2])}
+
+FAIL at (sim.clj:103)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:92)
+    Expected: [[0 1] [1 2]]
+      Actual: {:working ([1 1] [2 2])}
+
+FAIL at (sim.clj:104)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:92)
+    Expected: [[0 1] [1 2]]
+      Actual: {:working ([1 1] [2 2])}
+
+FAIL at (sim.clj:102)
+    Expected: {:working [[1 1] [2 2]]}
+      Actual: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.ClassCastException: clojure.lang.Keyword cannot be cast to java.lang.Number
+              averages_kill_clojure.test.sim$eval10171.invoke(sim.clj:102)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor81.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:103)
+    Expected: {:working [[1 1]]}
+      Actual: {:working [[0 1] [2 2]]}
+
+FAIL at (sim.clj:92)
+    Expected: [[0 1] [1 2]]
+      Actual: {:working ([1 1] [2 2])}
+
+FAIL at (sim.clj:102)
+    Expected: {:working [[1 1] [2 2]]}
+      Actual: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.ClassCastException: clojure.lang.Keyword cannot be cast to java.lang.Number
+              averages_kill_clojure.test.sim$eval10391.invoke(sim.clj:102)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor81.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:104)
+    Expected: {:working [[1 1]]}
+      Actual: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.ClassCastException: clojure.lang.Keyword cannot be cast to java.lang.Number
+              averages_kill_clojure.test.sim$eval10391.invoke(sim.clj:102)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor81.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:120)
+    Expected: {:work [], :free-workers [], :working [[0 1]], :completed-work []}
+      Actual: java.lang.RuntimeException: java.lang.ClassCastException: clojure.lang.Keyword cannot be cast to java.lang.Number
+              averages_kill_clojure.test.sim$last_tier_work.invoke(sim.clj:114)
+              averages_kill_clojure.test.sim$eval10401$fn__10402.invoke(sim.clj:120)
+              averages_kill_clojure.test.sim$eval10401.invoke(sim.clj:119)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor81.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:125)
+    Expected: {:work [], :free-workers [], :working [[1 1]], :completed-work []}
+      Actual: java.lang.RuntimeException: java.lang.ClassCastException: clojure.lang.Keyword cannot be cast to java.lang.Number
+              averages_kill_clojure.test.sim$last_tier_work.invoke(sim.clj:114)
+              averages_kill_clojure.test.sim$eval10401$fn__10404.invoke(sim.clj:125)
+              averages_kill_clojure.test.sim$eval10401.invoke(sim.clj:119)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor81.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:130)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: java.lang.RuntimeException: java.lang.ClassCastException: clojure.lang.Keyword cannot be cast to java.lang.Number
+              averages_kill_clojure.test.sim$last_tier_work.invoke(sim.clj:114)
+              averages_kill_clojure.test.sim$eval10401$fn__10406.invoke(sim.clj:130)
+              averages_kill_clojure.test.sim$eval10401.invoke(sim.clj:119)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor81.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:167)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:92)
+    Expected: [[0 1] [1 2]]
+      Actual: {:working ([1 1] [2 2])}
+
+FAIL at (sim.clj:128)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: {:work (), :free-workers (), :working [], :completed-work []}
+
+FAIL at (sim.clj:165)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:127)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: {:work (), :free-workers (), :working [], :completed-work []}
+
+FAIL at (sim.clj:164)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:121)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: {:work (), :free-workers (), :working [], :completed-work []}
+
+FAIL at (sim.clj:158)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:121)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: {:work (), :free-workers (), :working [], :completed-work []}
+
+FAIL at (sim.clj:158)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:125)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: {:work (), :free-workers (), :working [], :completed-work ([1 1])}
+
+FAIL at (sim.clj:162)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:125)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [[1]]}
+      Actual: {:work (), :free-workers (), :working [], :completed-work (1)}
+
+FAIL at (sim.clj:162)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:162)
+    Expected: 3
+      Actual: 0

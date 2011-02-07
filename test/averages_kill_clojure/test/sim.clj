@@ -5,7 +5,8 @@
 
 (defn worker [])
 
-(defn work-order [size])
+(defn work-order [size]
+  size)
 
 
 (def tier-with-work-order
@@ -19,10 +20,10 @@
 
 (fact (expected-number-of-work-orders {:work [(work-order 1) (work-order 2)]}) => 2)
 
-(defn finished? [last-tier expected-completed]
+(defn sim-finished? [last-tier expected-completed]
   (= (count (:completed-work last-tier)) expected-completed))
 
-(fact (finished? {:completed-work [(work-order 1)]} 1) => true)
+(fact (sim-finished? {:completed-work [(work-order 1)]} 1) => true)
 
 (defn free-workers? [tier]
   (not (empty? (:free-workers tier))))
@@ -43,13 +44,13 @@
           work (rest (:work tier))
           working (conj (:working tier) [0 (first (:work tier))])]
 
-          (assoc tier :work work 
-                      :free-workers free-workers 
-                      :working working)))
+          { :work work 
+            :free-workers free-workers 
+            :working working}))
 
 
 (defn start-agents-working [tier]
-  (loop [tier tier]
+  (loop [tier (assoc tier :working [])]
     (if (not (and (free-workers? tier) (outstanding-work? tier)))
       tier
       (recur (start-one-agents-work tier)))))
@@ -58,9 +59,16 @@
                              :free-workers [worker worker]
                              :working []
                              :completed-work []}) =>
-                            {:new-work []
-                             :new-free-workers []
-                             :new-working [[0 (work-order 1)] [0 (work-order 1)]]})
+                            {:work []
+                             :free-workers []
+                             :working [[0 (work-order 1)] [0 (work-order 1)]]}
+      (start-agents-working {:work [(work-order 1)]
+                              :free-workers [worker]
+                              :working [0 (work-order 1)]
+                              :completed-work []}) =>
+                            {:work []
+                             :free-workers []
+                             :working [[0 (work-order 1)]]})
 
 
 
@@ -69,23 +77,39 @@
 
 (fact (inc-work [0 (work-order 1)]) => [1 (work-order 1)])
 
+(defn unfinished-work? [work-in-progress]
+  (< (first work-in-progress) (second work-in-progress)))
+
+(defn finished-work? [work-in-progress]
+  (= (first work-in-progress) (second work-in-progress)))
+
+(fact (unfinished-work? [1 1]) => false
+      (unfinished-work? [0 1]) => true)
+
+(fact (filter unfinished-work? (:working {:working [[1 1]]})) => [])
+
 (defn agents-work [tier]
-  (assoc tier :working (map inc-work (:working tier))))
+  (assoc tier :working 
+         (map inc-work 
+              (filter unfinished-work? (:working tier)))))
 
 (fact (agents-work {:working [[0 (work-order 1)] [1 (work-order 2)]]}) =>
-                  {:working [[1 (work-order 1)] [2 (work-order 2)]]})
+                  {:working [[1 (work-order 1)] [2 (work-order 2)]]}
+      (agents-work {:working [[0 (work-order 1)] [2 (work-order 2)]]}) =>
+                   {:working [[1 (work-order 1)]]})
 
 
-(defn reconsile [tierA tierB]
-    (assoc tierA :working (vec (concat (:working tierA) (:working tierB)))
-                 :work (vec (concat (:work tierA) (:work tierB)))
-                 :free-workers (vec (concat (:free-workers tierA) (:free-workers tierB)))
-                 :completed-work (vec (concat (:completed-work tierA) (:completed-work tierB)))))
+(defn completed-work [tier]
+  {:completed-work (map second (filter finished-work? (:working tier)))})
 
 (defn last-tier-work [tier]
    (let [started-work (start-agents-working tier)
-         did-some-work (agents-work tier)]
-          (assoc started-work :working (vec (concat (:working started-work) (:working did-some-work))))))
+         did-some-work (agents-work tier)
+         completed-some-work (completed-work tier)]
+          (assoc tier :working (vec (concat (:working started-work) (:working did-some-work)))
+                      :work (:work started-work)
+                      :free-workers (:free-workers started-work)
+                      :completed-work (:completed-work completed-some-work))))
 
 (fact 
       (last-tier-work tier-with-work-order) =>     
@@ -96,14 +120,14 @@
       (last-tier-work (last-tier-work tier-with-work-order))
                                                 => {:work []
                                                    :free-workers []
-                                                   :working [1 (work-order 1)]
+                                                   :working [[1 (work-order 1)]]
                                                    :completed-work []}
+      (last-tier-work (last-tier-work (last-tier-work tier-with-work-order))) 
+                                                => {:work []
+                                                   :free-workers []
+                                                   :working []
+                                                   :completed-work [(work-order 1)]}
   )
-;      (last-tier-work (last-tier-work (last-tier-work tier-with-work-order))) 
-;                                                => {:work []
-;                                                   :free-workers []
-;                                                   :working []
-;                                                   :completed-work [(work-order 1)]}
 ;      (last-tier-work (last-tier-work (last-tier-work (last-tier-work tier-with-work-order)))) 
 ;                                                => {:work []
 ;                                                   :free-workers [worker]
@@ -115,7 +139,7 @@
 
 (defn run-sim [tiers]
   (loop [tiers tiers cur-time 0]
-    (if (finished? (last tiers) (expected-number-of-work-orders (first tiers)))
+    (if (sim-finished? (last tiers) (expected-number-of-work-orders (first tiers)))
       cur-time
       (recur (do-work tiers) (inc cur-time)))))
 
@@ -136,6 +160,6 @@
 
 
 (fact (run-sim [tier-with-work-order]) => 3
-      (provided (finished? tier-with-work-order 1) => true))
+      (provided (sim-finished? tier-with-work-order 1) => true))
 
 
