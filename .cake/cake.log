@@ -6,3 +6,1264 @@
 FAIL at (sim.clj:8)
     Expected: 22
       Actual: 2
+
+FAIL at (sim.clj:11)
+    Expected: 3
+      Actual: java.lang.ClassCastException: java.lang.Integer cannot be cast to clojure.lang.IFn
+              averages_kill_clojure.test.sim$eval3554$fn__3555.invoke(sim.clj:11)
+              averages_kill_clojure.test.sim$eval3554.invoke(sim.clj:11)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:15)
+    Expected: 22
+      Actual: 2
+
+FAIL at (sim.clj:13)
+    Expected: 3
+      Actual: java.lang.ClassCastException: java.lang.Integer cannot be cast to clojure.lang.IFn
+              averages_kill_clojure.test.sim$eval3658$fn__3659.invoke(sim.clj:13)
+              averages_kill_clojure.test.sim$eval3658.invoke(sim.clj:13)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:17)
+    Expected: 22
+      Actual: 2
+
+FAIL at (sim.clj:17)
+    Expected: 22
+      Actual: 2
+
+FAIL at (sim.clj:16)
+    Expected: 3
+      Actual: java.lang.Error: #'tier has no implementation. It's used as a prerequisite in Midje tests.
+              averages_kill_clojure.test.sim$tier.doInvoke(sim.clj:6)
+              averages_kill_clojure.test.sim$eval3951$fn__3952.invoke(sim.clj:16)
+              averages_kill_clojure.test.sim$eval3951.invoke(sim.clj:16)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+-----
+-- WARNING: In this version, prerequisite arguments that are functions are
+-- considered checkers. In the near future, they'll be considered ordinary
+-- values. If you want them to be checkers, you need to declare them as such.
+-- The function argument I'm objecting to is:
+--     a function named 'worker'
+--     near (sim.clj:15)
+-- To future-proof your fact (and make this message go away), do this:
+--     (as-checker <<<your function argument>>>)
+-- If you never wanted this argument to be treated as a checker, do this:
+       (exactly <<<your function argument>>>)
+-- For more, see https://github.com/marick/Midje/wiki/Checkers-within-prerequisites
+-----
+
+FAIL at (sim.clj:16)
+You claimed the following was needed, but it was never used:
+    (tier worker)
+
+FAIL at (sim.clj:15)
+    Expected: 3
+      Actual: java.lang.Error: #'worker has no implementation. It's used as a prerequisite in Midje tests.
+              averages_kill_clojure.test.sim$worker.doInvoke(sim.clj:6)
+              averages_kill_clojure.test.sim$eval4059$fn__4060.invoke(sim.clj:15)
+              averages_kill_clojure.test.sim$eval4059.invoke(sim.clj:15)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+012301230
+1
+2
+3
+
+FAIL at (sim.clj:14)
+    Expected: 2
+      Actual: []
+0
+1
+2
+3
+
+FAIL at (sim.clj:14)
+    Expected: 2
+      Actual: []
+
+FAIL at (sim.clj:20)
+    Expected: 0
+      Actual: 3
+
+FAIL at (sim.clj:23)
+    Expected: 0
+      Actual: java.lang.Error: #'finished? has no implementation. It's used as a prerequisite in Midje tests.
+              averages_kill_clojure.test.sim$finished_QMARK_.doInvoke(sim.clj:6)
+              averages_kill_clojure.test.sim$run_sim.invoke(sim.clj:18)
+              averages_kill_clojure.test.sim$eval5715$fn__5716.invoke(sim.clj:26)
+              averages_kill_clojure.test.sim$eval5715.invoke(sim.clj:22)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor76.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor66.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:23)
+    Expected: 0
+      Actual: java.lang.Error: #'finished? has no implementation. It's used as a prerequisite in Midje tests.
+              averages_kill_clojure.test.sim$finished_QMARK_.doInvoke(sim.clj:6)
+              averages_kill_clojure.test.sim$run_sim.invoke(sim.clj:18)
+              averages_kill_clojure.test.sim$eval5747$fn__5748.invoke(sim.clj:26)
+              averages_kill_clojure.test.sim$eval5747.invoke(sim.clj:22)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor76.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor66.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:33)
+You never said finished? would be needed with these arguments:
+    ({:work [nil], :free-workers [#<sim$worker averages_kill_clojure.test.sim$worker@b18b90>], :working [], :competed-work []} 1)
+
+FAIL at (sim.clj:33)
+You claimed the following was needed, but it was never used:
+    (finished? .blah. .blah.)
+
+FAIL at (sim.clj:28)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:23)
+    Expected: 0
+      Actual: java.lang.Error: #'finished? has no implementation. It's used as a prerequisite in Midje tests.
+              averages_kill_clojure.test.sim$finished_QMARK_.doInvoke(sim.clj:6)
+              averages_kill_clojure.test.sim$run_sim.invoke(sim.clj:18)
+              averages_kill_clojure.test.sim$eval5857$fn__5858.invoke(sim.clj:26)
+              averages_kill_clojure.test.sim$eval5857.invoke(sim.clj:22)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor76.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor66.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:40)
+You never said finished? would be needed with these arguments:
+    ({:work [nil], :free-workers [#<sim$worker averages_kill_clojure.test.sim$worker@86efbc>], :working [], :competed-work []} 1)
+
+FAIL at (sim.clj:40)
+You claimed the following was needed, but it was never used:
+    (finished? one-tier-one-work-order one-tier-one-work-order)
+
+FAIL at (sim.clj:35)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:23)
+    Expected: 0
+      Actual: java.lang.Error: #'finished? has no implementation. It's used as a prerequisite in Midje tests.
+              averages_kill_clojure.test.sim$finished_QMARK_.doInvoke(sim.clj:6)
+              averages_kill_clojure.test.sim$run_sim.invoke(sim.clj:18)
+              averages_kill_clojure.test.sim$eval5967$fn__5968.invoke(sim.clj:26)
+              averages_kill_clojure.test.sim$eval5967.invoke(sim.clj:22)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor76.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor66.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:40)
+You never said finished? would be needed with these arguments:
+    ({:work [nil], :free-workers [#<sim$worker averages_kill_clojure.test.sim$worker@494e4a>], :working [], :competed-work []} 1)
+
+FAIL at (sim.clj:40)
+You claimed the following was needed, but it was never used:
+    (finished? one-tier-one-work-order one-tier-one-work-order)
+
+FAIL at (sim.clj:35)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:23)
+    Expected: 0
+      Actual: java.lang.Error: #'finished? has no implementation. It's used as a prerequisite in Midje tests.
+              averages_kill_clojure.test.sim$finished_QMARK_.doInvoke(sim.clj:6)
+              averages_kill_clojure.test.sim$run_sim.invoke(sim.clj:18)
+              averages_kill_clojure.test.sim$eval6077$fn__6078.invoke(sim.clj:26)
+              averages_kill_clojure.test.sim$eval6077.invoke(sim.clj:22)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor76.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor66.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:36)
+You never said finished? would be needed with these arguments:
+    ({:work [nil], :free-workers [#<sim$worker averages_kill_clojure.test.sim$worker@d7f3e3>], :working [], :competed-work []} 1)
+
+FAIL at (sim.clj:36)
+You claimed the following was needed, but it was never used:
+    (finished? one-tier-one-work-order one-tier-one-work-order)
+
+FAIL at (sim.clj:35)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:23)
+    Expected: 0
+      Actual: java.lang.Error: #'finished? has no implementation. It's used as a prerequisite in Midje tests.
+              averages_kill_clojure.test.sim$finished_QMARK_.doInvoke(sim.clj:6)
+              averages_kill_clojure.test.sim$run_sim.invoke(sim.clj:18)
+              averages_kill_clojure.test.sim$eval6187$fn__6188.invoke(sim.clj:26)
+              averages_kill_clojure.test.sim$eval6187.invoke(sim.clj:22)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor76.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor66.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:35)
+    Expected: 3
+      Actual: 0
+{:server-socket #<ServerSocket ServerSocket[addr=localhost/127.0.0.1,port=0,localport=25368]>, :connections #<Ref@16535bf: #{}>}
+
+FAIL at (sim.clj:39)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:49)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:52)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:55)
+You never said do-work would be needed with these arguments:
+    ([{:work [nil], :free-workers [#<sim$worker averages_kill_clojure.test.sim$worker@11dc21>], :working [], :completed-work []}])
+
+FAIL at (sim.clj:55)
+You claimed the following was needed, but it was never used:
+    (do-work one-tier-one-work-order)
+
+FAIL at (sim.clj:58)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:59)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:60)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:52)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:30)
+    Expected: {:work [], :free-workers [], :working [0 nil], :completed-work []}
+      Actual: []
+
+FAIL at (sim.clj:60)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:31)
+    Expected: {:work [], :free-workers [], :working [0 nil], :completed-work []}
+      Actual: []
+
+FAIL at (sim.clj:35)
+    Expected: {:work [], :free-workers [], :working [1 nil], :completed-work []}
+      Actual: []
+
+FAIL at (sim.clj:40)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [nil]}
+      Actual: []
+
+FAIL at (sim.clj:70)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:31)
+    Expected: {:work [], :free-workers [], :working [0 nil], :completed-work []}
+      Actual: []
+
+FAIL at (sim.clj:35)
+    Expected: {:work [], :free-workers [], :working [1 nil], :completed-work []}
+      Actual: []
+
+FAIL at (sim.clj:40)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [nil]}
+      Actual: []
+
+FAIL at (sim.clj:45)
+    Expected: {:work [], :free-workers [#<sim$worker averages_kill_clojure.test.sim$worker@10e3e70>], :working [], :completed-work []}
+      Actual: []
+
+FAIL at (sim.clj:75)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:49)
+    Expected: {:work [], :free-workers [], :working [0 nil], :completed-work []}
+      Actual: java.lang.IllegalArgumentException: Wrong number of args (0) passed to: PersistentArrayMap
+              averages_kill_clojure.test.sim$start_one_agents_work.invoke(sim.clj:37)
+              averages_kill_clojure.test.sim$last_tier_work.invoke(sim.clj:46)
+              averages_kill_clojure.test.sim$eval5738$fn__5739.invoke(sim.clj:49)
+              averages_kill_clojure.test.sim$eval5738.invoke(sim.clj:48)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:53)
+    Expected: {:work [], :free-workers [], :working [1 nil], :completed-work []}
+      Actual: java.lang.IllegalArgumentException: Wrong number of args (0) passed to: PersistentArrayMap
+              averages_kill_clojure.test.sim$start_one_agents_work.invoke(sim.clj:37)
+              averages_kill_clojure.test.sim$last_tier_work.invoke(sim.clj:46)
+              averages_kill_clojure.test.sim$eval5738$fn__5741.invoke(sim.clj:53)
+              averages_kill_clojure.test.sim$eval5738.invoke(sim.clj:48)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:58)
+    Expected: {:work [], :free-workers [], :working [], :completed-work [nil]}
+      Actual: java.lang.IllegalArgumentException: Wrong number of args (0) passed to: PersistentArrayMap
+              averages_kill_clojure.test.sim$start_one_agents_work.invoke(sim.clj:37)
+              averages_kill_clojure.test.sim$last_tier_work.invoke(sim.clj:46)
+              averages_kill_clojure.test.sim$eval5738$fn__5743.invoke(sim.clj:58)
+              averages_kill_clojure.test.sim$eval5738.invoke(sim.clj:48)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:63)
+    Expected: {:work [], :free-workers [#<sim$worker averages_kill_clojure.test.sim$worker@162fb33>], :working [], :completed-work []}
+      Actual: java.lang.IllegalArgumentException: Wrong number of args (0) passed to: PersistentArrayMap
+              averages_kill_clojure.test.sim$start_one_agents_work.invoke(sim.clj:37)
+              averages_kill_clojure.test.sim$last_tier_work.invoke(sim.clj:46)
+              averages_kill_clojure.test.sim$eval5738$fn__5745.invoke(sim.clj:63)
+              averages_kill_clojure.test.sim$eval5738.invoke(sim.clj:48)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:93)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:94)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:96)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:37)
+    Expected: true
+      Actual: java.lang.IllegalArgumentException: Wrong number of args passed to keyword: :work
+              averages_kill_clojure.test.sim$outstanding_work_QMARK_.invoke(sim.clj:35)
+              averages_kill_clojure.test.sim$eval6467$fn__6468.invoke(sim.clj:37)
+              averages_kill_clojure.test.sim$eval6467.invoke(sim.clj:37)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:98)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:98)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:53)
+    Expected: {:work [], :free-workers [], :working [0 nil], :completed-work []}
+      Actual: java.lang.IllegalArgumentException: Wrong number of args (0) passed to: PersistentArrayMap
+              averages_kill_clojure.test.sim$start_one_agents_work.invoke(sim.clj:41)
+              averages_kill_clojure.test.sim$last_tier_work.invoke(sim.clj:50)
+              averages_kill_clojure.test.sim$eval6917$fn__6918.invoke(sim.clj:53)
+              averages_kill_clojure.test.sim$eval6917.invoke(sim.clj:52)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:99)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:102)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:54)
+    Expected: {:work [], :free-workers [], :working [0 nil], :completed-work []}
+      Actual: java.lang.IllegalArgumentException: Wrong number of args (0) passed to: PersistentArrayMap
+              averages_kill_clojure.test.sim$start_one_agents_work.invoke(sim.clj:41)
+              averages_kill_clojure.test.sim$last_tier_work.invoke(sim.clj:51)
+              averages_kill_clojure.test.sim$eval7429$fn__7430.invoke(sim.clj:54)
+              averages_kill_clojure.test.sim$eval7429.invoke(sim.clj:53)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:100)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:54)
+    Expected: {:work [], :free-workers [], :working [0 nil], :completed-work []}
+      Actual: java.lang.IllegalArgumentException: Wrong number of args (0) passed to: PersistentArrayMap
+              averages_kill_clojure.test.sim$start_one_agents_work.invoke(sim.clj:41)
+              averages_kill_clojure.test.sim$last_tier_work.invoke(sim.clj:51)
+              averages_kill_clojure.test.sim$eval7607$fn__7608.invoke(sim.clj:54)
+              averages_kill_clojure.test.sim$eval7607.invoke(sim.clj:53)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:101)
+    Expected: 3
+      Actual: 0
+{:work [], :free-workers [], :working [0 nil], :completed-work []}
+FAIL at (sim.clj:59)
+    Expected: {:work [], :free-workers [], :working [0 nil], :completed-work []}
+      Actual: java.lang.IllegalArgumentException: Wrong number of args (0) passed to: PersistentArrayMap
+              averages_kill_clojure.test.sim$start_one_agents_work.invoke(sim.clj:41)
+              averages_kill_clojure.test.sim$last_tier_work.invoke(sim.clj:51)
+              averages_kill_clojure.test.sim$eval7787$fn__7788.invoke(sim.clj:59)
+              averages_kill_clojure.test.sim$eval7787.invoke(sim.clj:58)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:106)
+    Expected: 3
+      Actual: 0
+{:work [], :free-workers [], :working [0 nil], :completed-work []}
+FAIL at (sim.clj:61)
+    Expected: {:work [], :free-workers [], :working [0 nil], :completed-work []}
+      Actual: java.lang.IllegalArgumentException: Wrong number of args (0) passed to: PersistentArrayMap
+              averages_kill_clojure.test.sim$start_one_agents_work.invoke(sim.clj:41)
+              averages_kill_clojure.test.sim$last_tier_work.invoke(sim.clj:53)
+              averages_kill_clojure.test.sim$eval7969$fn__7970.invoke(sim.clj:61)
+              averages_kill_clojure.test.sim$eval7969.invoke(sim.clj:60)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:108)
+    Expected: 3
+      Actual: 0
+{:work [], :free-workers [], :working [0 nil], :completed-work []}
+FAIL at (sim.clj:61)
+    Expected: {:work [], :free-workers [], :working [0 nil], :completed-work []}
+      Actual: java.lang.IllegalArgumentException: Wrong number of args (0) passed to: PersistentArrayMap
+              averages_kill_clojure.test.sim$start_one_agents_work.invoke(sim.clj:41)
+              averages_kill_clojure.test.sim$last_tier_work.invoke(sim.clj:53)
+              averages_kill_clojure.test.sim$eval8263$fn__8264.invoke(sim.clj:61)
+              averages_kill_clojure.test.sim$eval8263.invoke(sim.clj:60)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:108)
+    Expected: 3
+      Actual: 0
+{:work [], :free-workers [], :working [0 nil], :completed-work []}
+FAIL at (sim.clj:61)
+    Expected: {:work [], :free-workers [], :working [0 nil], :completed-work []}
+      Actual: {:work [nil], :free-workers [#<sim$worker averages_kill_clojure.test.sim$worker@1dc7b1a>], :working [], :completed-work []}
+
+FAIL at (sim.clj:108)
+    Expected: 3
+      Actual: 0
+{:work [], :free-workers [], :working [0 nil], :completed-work []}
+FAIL at (sim.clj:61)
+    Expected: {:work [], :free-workers [], :working [0 nil], :completed-work []}
+      Actual: {:work [nil], :free-workers [#<sim$worker averages_kill_clojure.test.sim$worker@1810a1>], :working [], :completed-work []}
+
+FAIL at (sim.clj:108)
+    Expected: 3
+      Actual: 0
+{:work [], :free-workers [], :working [0 nil], :completed-work []}
+FAIL at (sim.clj:61)
+    Expected: {:work [], :free-workers [], :working [0 nil], :completed-work []}
+      Actual: {:work [nil], :free-workers [#<sim$worker averages_kill_clojure.test.sim$worker@7cca66>], :working [], :completed-work []}
+
+FAIL at (sim.clj:108)
+    Expected: 3
+      Actual: 0
+{:work [], :free-workers [], :working [0 nil], :completed-work []}
+FAIL at (sim.clj:61)
+    Expected: {:work [], :free-workers [], :working [0 nil], :completed-work []}
+      Actual: {:work [nil], :free-workers [#<sim$worker averages_kill_clojure.test.sim$worker@156cce6>], :working [], :completed-work []}
+
+FAIL at (sim.clj:108)
+    Expected: 3
+      Actual: 0
+{:work [], :free-workers [], :working [0 nil], :completed-work []}
+FAIL at (sim.clj:61)
+    Expected: {:work [], :free-workers [], :working [0 nil], :completed-work []}
+      Actual: {:work [nil], :free-workers [#<sim$worker averages_kill_clojure.test.sim$worker@1d7f521>], :working [], :completed-work []}
+
+FAIL at (sim.clj:108)
+    Expected: 3
+      Actual: 0
+{:work [], :free-workers [], :working [0 nil], :completed-work []}
+FAIL at (sim.clj:107)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:102)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:110)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:57)
+    Expected: {:work [], :free-workers [], :working [], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [0 nil], :completed-work []}
+
+FAIL at (sim.clj:117)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:57)
+    Expected: {:work [], :free-workers [], :working [[0 nil] [0 nil]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [0 nil], :completed-work []}
+
+FAIL at (sim.clj:117)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:71)
+    Expected: {:work [], :free-workers [], :working [0 nil], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 nil]], :completed-work []}
+
+FAIL at (sim.clj:117)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:71)
+    Expected: {:work [], :free-workers [], :working [0 nil], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 nil]], :completed-work []}
+
+FAIL at (sim.clj:117)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:117)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:73)
+    Expected: {:working [[1 nil] [2 nil]]}
+      Actual: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.ClassCastException: clojure.lang.PersistentVector cannot be cast to java.lang.Number
+              averages_kill_clojure.test.sim$eval11802.invoke(sim.clj:73)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:127)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:70)
+    Expected: [1 nil]
+      Actual: java.lang.ClassCastException: clojure.lang.PersistentVector cannot be cast to java.lang.Number
+              averages_kill_clojure.test.sim$inc_work.invoke(sim.clj:68)
+              averages_kill_clojure.test.sim$eval12005$fn__12006.invoke(sim.clj:70)
+              averages_kill_clojure.test.sim$eval12005.invoke(sim.clj:70)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:75)
+    Expected: {:working [[1 nil] [2 nil]]}
+      Actual: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.ClassCastException: clojure.lang.PersistentVector cannot be cast to java.lang.Number
+              averages_kill_clojure.test.sim$eval12011.invoke(sim.clj:75)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:129)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:70)
+    Expected: [1 nil]
+      Actual: java.lang.ClassCastException: java.lang.Integer cannot be cast to clojure.lang.IFn
+              averages_kill_clojure.test.sim$inc_work.invoke(sim.clj:68)
+              averages_kill_clojure.test.sim$eval12219$fn__12220.invoke(sim.clj:70)
+              averages_kill_clojure.test.sim$eval12219.invoke(sim.clj:70)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:75)
+    Expected: {:working [[1 nil] [2 nil]]}
+      Actual: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.ClassCastException: java.lang.Integer cannot be cast to clojure.lang.IFn
+              averages_kill_clojure.test.sim$eval12225.invoke(sim.clj:75)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:129)
+    Expected: 3
+      Actual: 0
+0
+
+FAIL at (sim.clj:131)
+    Expected: 3
+      Actual: 0
+1
+
+FAIL at (sim.clj:131)
+    Expected: 3
+      Actual: 0
+1
+1
+[1 nil]
+
+FAIL at (sim.clj:133)
+    Expected: 3
+      Actual: 0
+1
+[1 nil]
+
+FAIL at (sim.clj:133)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:130)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:89)
+    Expected: {:work [], :free-workers [], :working [1 nil], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 nil]], :completed-work []}
+
+FAIL at (sim.clj:131)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:84)
+    Expected: {:work [], :free-workers [], :working [[0 nil]], :completed-work []}
+      Actual: {:work (), :free-workers (), :working ([1 nil]), :completed-work []}
+
+FAIL at (sim.clj:89)
+    Expected: {:work [], :free-workers [], :working [1 nil], :completed-work []}
+      Actual: {:work (), :free-workers (), :working ([2 nil]), :completed-work []}
+
+FAIL at (sim.clj:131)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:82)
+    Expected: {:work [:blah :blag], :free-workers [:blah :blag], :working [:blah :blag], :completed-work [:blah :blag]}
+      Actual: {:work [:blah], :free-workers [:blah], :working [:blah], :completed-work [:blah]}
+
+FAIL at (sim.clj:82)
+    Expected: {:work [:blah :blag], :free-workers [:blah :blag], :working [:blah :blag], :completed-work [:blah :blag]}
+      Actual: {:work [:blah], :free-workers [:blah], :working [:blah], :completed-work [:blah]}
+
+FAIL at (sim.clj:102)
+    Expected: {:work [], :free-workers [], :working [1 nil], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 nil]], :completed-work []}
+
+FAIL at (sim.clj:144)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:82)
+    Expected: {:work [:blah :blag], :free-workers [:blah :blag], :working [:blah :blag], :completed-work [:blah :blag]}
+      Actual: ([:work [:blah] [:work [:blag]]] [:free-workers [:blah] [:free-workers [:blag]]] [:working [:blah] [:working [:blag]]] [:completed-work [:blah] [:completed-work [:blag]]])
+
+FAIL at (sim.clj:97)
+    Expected: {:work [], :free-workers [], :working [[0 nil]], :completed-work []}
+      Actual: ([:work () [:work [nil]]] [:free-workers () [:free-workers [#<sim$worker averages_kill_clojure.test.sim$worker@1ac4afb>]]] [:working [[0 nil]] [:working ()]] [:completed-work [] [:completed-work []]])
+
+FAIL at (sim.clj:102)
+    Expected: {:work [], :free-workers [], :working [1 nil], :completed-work []}
+      Actual: java.lang.ClassCastException: clojure.lang.LazySeq cannot be cast to clojure.lang.Associative
+              averages_kill_clojure.test.sim$agents_work.invoke(sim.clj:74)
+              averages_kill_clojure.test.sim$last_tier_work.invoke(sim.clj:92)
+              averages_kill_clojure.test.sim$eval14991$fn__14994.invoke(sim.clj:102)
+              averages_kill_clojure.test.sim$eval14991.invoke(sim.clj:96)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:144)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:85)
+    Expected: {:work [:blah :blag], :free-workers [:blah :blag], :working [:blah :blag], :completed-work [:blah :blag]}
+      Actual: {:work [:blah [:blag]], :free-workers [:blah [:blag]], :working [:blah [:blag]], :completed-work [:blah [:blag]]}
+
+FAIL at (sim.clj:100)
+    Expected: {:work [], :free-workers [], :working [[0 nil]], :completed-work []}
+      Actual: {:work ([nil]), :free-workers ([#<sim$worker averages_kill_clojure.test.sim$worker@14298a5>]), :working [[0 nil] ()], :completed-work [[]]}
+
+FAIL at (sim.clj:105)
+    Expected: {:work [], :free-workers [], :working [1 nil], :completed-work []}
+      Actual: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.RuntimeException: java.lang.NullPointerException
+              averages_kill_clojure.test.sim$eval15223.invoke(sim.clj:99)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:147)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:101)
+    Expected: {:work [], :free-workers [], :working [[0 nil]], :completed-work []}
+      Actual: {:work (nil), :free-workers (#<sim$worker averages_kill_clojure.test.sim$worker@f26800>), :working ([0 nil]), :completed-work ()}
+
+FAIL at (sim.clj:106)
+    Expected: {:work [], :free-workers [], :working [1 nil], :completed-work []}
+      Actual: {:work (nil), :free-workers (#<sim$worker averages_kill_clojure.test.sim$worker@f26800>), :working ([0 nil] [0 nil] [1 nil]), :completed-work ()}
+
+FAIL at (sim.clj:148)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:101)
+    Expected: {:work [], :free-workers [], :working [[0 nil]], :completed-work []}
+      Actual: {:work [nil], :free-workers [#<sim$worker averages_kill_clojure.test.sim$worker@1dc421>], :working [[0 nil]], :completed-work []}
+
+FAIL at (sim.clj:106)
+    Expected: {:work [], :free-workers [], :working [1 nil], :completed-work []}
+      Actual: {:work [nil], :free-workers [#<sim$worker averages_kill_clojure.test.sim$worker@1dc421>], :working [[0 nil] [0 nil] [1 nil]], :completed-work []}
+
+FAIL at (sim.clj:148)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:92)
+    Expected: {:work [], :free-workers [], :working [[0 nil]], :completed-work []}
+      Actual: java.lang.IllegalArgumentException: Wrong number of args (2) passed to: core$assoc
+              averages_kill_clojure.test.sim$last_tier_work.invoke(sim.clj:89)
+              averages_kill_clojure.test.sim$eval16466$fn__16467.invoke(sim.clj:92)
+              averages_kill_clojure.test.sim$eval16466.invoke(sim.clj:91)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:97)
+    Expected: {:work [], :free-workers [], :working [1 nil], :completed-work []}
+      Actual: java.lang.IllegalArgumentException: Wrong number of args (2) passed to: core$assoc
+              averages_kill_clojure.test.sim$last_tier_work.invoke(sim.clj:89)
+              averages_kill_clojure.test.sim$eval16466$fn__16469.invoke(sim.clj:97)
+              averages_kill_clojure.test.sim$eval16466.invoke(sim.clj:91)
+              bake.reload$reload_namespaces.doInvoke(reload.clj:24)
+              bake.reload$reload.invoke(reload.clj:70)
+              sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+              classlojure$invoke_in_STAR_.doInvoke(classlojure.clj:37)
+              classlojure$eval_in$fn__56.invoke(classlojure.clj:57)
+              classlojure$eval_in.doInvoke(classlojure.clj:52)
+              cake.project$reload$fn__468.invoke(project.clj:47)
+              cake.project$reload.invoke(project.clj:44)
+              cake.project$project_eval.invoke(project.clj:85)
+              tasks$task_midje.invoke(tasks.clj:11)
+              cake.task$run_task.invoke(task.clj:136)
+              cake.task$run_task.invoke(task.clj:122)
+              cake.main$process_command.invoke(main.clj:25)
+              cake.server$create$fn__1006.invoke(server.clj:84)
+              cake.utils.server_socket$accept_fn$fn__738$fn__741.invoke(server_socket.clj:39)
+              cake.utils.server_socket$accept_fn$fn__738.invoke(server_socket.clj:38)
+
+FAIL at (sim.clj:139)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:92)
+    Expected: {:work [], :free-workers [], :working [[0 nil]], :completed-work []}
+      Actual: {:work [nil], :free-workers (), :working [[0 nil]], :completed-work []}
+
+FAIL at (sim.clj:97)
+    Expected: {:work [], :free-workers [], :working [1 nil], :completed-work []}
+      Actual: {:work [nil nil], :free-workers (), :working [[0 nil]], :completed-work []}
+
+FAIL at (sim.clj:139)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:97)
+    Expected: {:work [], :free-workers [], :working [1 nil], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 nil] [1 nil]], :completed-work []}
+
+FAIL at (sim.clj:139)
+    Expected: 3
+      Actual: 0
+
+FAIL at (sim.clj:106)
+    Expected: {:work [], :free-workers [], :working [1 nil], :completed-work []}
+      Actual: {:work (), :free-workers (), :working [[0 nil] [1 nil]], :completed-work []}
+
+FAIL at (sim.clj:148)
+    Expected: 3
+      Actual: 0
