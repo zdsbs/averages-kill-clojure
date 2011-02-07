@@ -3,6 +3,16 @@
   (:use clojure.test)
   (:use midje.sweet))
 
+(def empty-tier
+  {:work []
+   :free-workers []
+   :working []
+   :completed-work []})
+
+(defn with [workers work]
+  (assoc empty-tier :work work
+         :free-workers workers))
+
 
 (def tier-with-work-order
     {:work [(work-order 1)]
@@ -11,6 +21,6 @@
          :completed-work []})
 
 
-(fact "big" (run-sim [tier-with-work-order]) => 3)
+(fact "big" (run-sim [(with [worker] [(work-order 1) (work-order 1)])]) => 3)
 
 

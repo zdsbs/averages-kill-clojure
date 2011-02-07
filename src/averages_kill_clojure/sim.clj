@@ -58,7 +58,7 @@
   {:completed-work (map second (filter finished-work? (:working tier)))})
 
 (defn free-up-workers [tier]
-  tier)
+  {:free-workers (map (fn [_] worker) (:completed-work tier))})
 
 (defn last-tier-work [tier]
    (let [started-work (start-agents-working tier)
@@ -67,8 +67,8 @@
          freed-up-workers (free-up-workers tier)]
           (assoc tier :working (vec (concat (:working started-work) (:working did-some-work)))
                       :work (:work started-work)
-                      :free-workers (:free-workers started-work)
-                      :completed-work (:completed-work completed-some-work))))
+                      :free-workers (concat (:free-workers started-work) (:free-workers freed-up-workers))
+                      :completed-work (vec (concat (:completed-work completed-some-work) (:completed-work tier))))))
 
 
 (defn do-work [tiers]
